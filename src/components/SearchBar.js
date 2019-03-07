@@ -6,25 +6,32 @@ class SearchBar extends Component {
         term: 'test'
     };
 
-    
+    onInputChange = (event) => {
+        this.setState({
+            term: event.target.value
+        })
+        console.log(this.state.term);
+    }        
+
+    onFormSubmit = (event) => {
+        // event.preventDefault();
+
+        console.log('11');
+    }
 
     render() {
-
-        const onInputChange = () => {
-            console.log('11');
-        }        
 
         const { term } = this.state;
 
         return (
             <div className="search-bar ui segment">
-                <form className="ui form">
+                <form onSubmit={this.onFormSubmit} className="ui form">
                     <div className="field">
                         <label>Video Search</label>
                         <input 
                             type="text"
                             value={term}
-                            onChange={onInputChange}
+                            onChange={this.onInputChange}
                         />
                     </div>
 
