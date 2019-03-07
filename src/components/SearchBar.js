@@ -17,6 +17,7 @@ class SearchBar extends Component {
         // event.preventDefault();
 
         console.log('11');
+        
     }
 
     render() {
