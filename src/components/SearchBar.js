@@ -14,10 +14,8 @@ class SearchBar extends Component {
     }        
 
     onFormSubmit = (event) => {
-        // event.preventDefault();
-
-        console.log('11');
-        
+        event.preventDefault();
+        this.props.onFormSubmit(this.state.term)
     }
 
     render() {
@@ -33,6 +31,7 @@ class SearchBar extends Component {
                             type="text"
                             value={term}
                             onChange={this.onInputChange}
+                            // onFormSubmit={}
                         />
                     </div>
 
