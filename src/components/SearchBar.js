@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 class SearchBar extends Component {
 
     state = {
-        term: 'test'
+        term: ''
     };
 
     onInputChange = (event) => {
@@ -31,6 +31,7 @@ class SearchBar extends Component {
                             type="text"
                             value={term}
                             onChange={this.onInputChange}
+                            placeholder="키워드를 입력하세요."
                             // onFormSubmit={}
                         />
                     </div>
