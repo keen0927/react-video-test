@@ -14,10 +14,11 @@ class App extends Component {
                 q: term
             }
         });
-
+        
         this.setState({
             videos: response.data.items
         });
+        
     };
 
     render() {
