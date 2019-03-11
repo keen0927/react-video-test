@@ -7,7 +7,10 @@ import VideoDetail from './VideoDetail';
 
 class App extends Component {
 
-    state = { videos: [], selectedVideo: null };
+    state = { 
+        videos: [],
+        selectedVideo: null
+    };
 
     componentDidMount() {
         this.onTermSubmit('buildings');
